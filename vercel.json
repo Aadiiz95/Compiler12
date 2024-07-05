@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "name": "compiler",
+    "builds": [
+      {
+        "src": "Api.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/compile",
+        "dest": "/Api.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
+  
